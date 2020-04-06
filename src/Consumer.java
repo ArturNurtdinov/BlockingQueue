@@ -8,7 +8,7 @@ public class Consumer implements Runnable {
         try {
             while (true) {
                 Student student = queue.take();
-                if (student.isPoisoned()) {
+                if (student.getAmountOfLabs() == -1) {
                     break;
                 }
                 handle(student);
